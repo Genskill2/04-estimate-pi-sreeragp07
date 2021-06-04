@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <math.h>
 
-float mc_pi(int);
+float mc_pi(int n);
 
 float frandom() {
   long int q = random();
@@ -39,35 +39,25 @@ int main(void) {
   }
 }
 
-float mc_pi(int n)
-{
-	int i;
-	float rand_x, rand_y, origin_dist, pi,pi1;
-	int c_points = 0, s_points = 0;
-  
-   
-    	for (i = 0; i < n ; i++) {
-  
-      
-        rand_x = frandom();
-        rand_y = frandom();
-  
-  
-        origin_dist = rand_x * rand_x + rand_y * rand_y;
-  
-     
-        if (origin_dist <= 1)
-            c_points++;
-  
-       
-        s_points++;
-        }
-  
-        pi1 = (4 * c_points) / s_points;
-      	pi=(float)pi1;
+float mc_pi(int n){
+	int a = 0;
+	int b = 0;
+	float pi;
+	for(int i=1;i<=n;i++){
+		float x=frandom();
+		float y=frandom();
+		float dist=(x*x)+(y*y);
+		a+=1;
+		dist=sqrt(d);
+		
+		if (dist<=1.0){
+			b+=1; 
+		}
+		pi = 4*((float)a/(float)b);
+	}
 	return pi;
-
 }
+
 
 
 
