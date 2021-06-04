@@ -39,5 +39,35 @@ int main(void) {
   }
 }
 
+float mc_pi(int n)
+{
+	int i;
+	float rand_x, rand_y, origin_dist, pi,pi1;
+	int c_points = 0, s_points = 0;
+  
+   
+    	for (i = 0; i < n ; i++) {
+  
+      
+        rand_x = frandom();
+        rand_y = frandom();
+  
+  
+        origin_dist = rand_x * rand_x + rand_y * rand_y;
+  
+     
+        if (origin_dist <= 1)
+            c_points++;
+  
+       
+        s_points++;
+        }
+  
+        pi1 = (4 * c_points) / s_points;
+      	pi=(float)pi1;
+	return pi;
+
+}
+
 
 
