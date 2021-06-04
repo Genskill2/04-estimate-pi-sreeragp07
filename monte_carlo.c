@@ -38,22 +38,21 @@ int main(void) {
     }
   }
 }
-
 float mc_pi(int n){
-	int a = 0;
-	int b = 0;
+	int square = 0;
+	int circle = 0;
 	float pi;
 	for(int i=1;i<=n;i++){
 		float x=frandom();
 		float y=frandom();
 		float dist=(x*x)+(y*y);
-		a+=1;
+		square+=1;
 		dist=sqrt(dist);
 		
 		if (dist<=1.0){
-			b+=1; 
+			circle+=1; 
 		}
-		pi = 4*((float)a/(float)b);
+		pi = 4*((float)circle/(float)square);		
 	}
 	return pi;
 }
