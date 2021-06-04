@@ -48,7 +48,7 @@ float mc_pi(int n){
 		float y=frandom();
 		float dist=(x*x)+(y*y);
 		a+=1;
-		dist=sqrt(d);
+		dist=sqrt(dist);
 		
 		if (dist<=1.0){
 			b+=1; 
